@@ -1,4 +1,4 @@
-import { BsCalendarFill, BsStarFill, BsArchiveFill } from 'react-icons/bs';
+import { BsCalendarFill, BsStarFill, BsArchiveFill, BsFillEyeFill } from 'react-icons/bs';
 
 const Repository = ({ repository }) => {
   const locale = 'pt-br';
@@ -40,6 +40,11 @@ const Repository = ({ repository }) => {
           </div>
 
           <small className='small text-info'>{repository.language}</small>
+
+          <a href={repository.html_url} target='_blank' className='btn btn-block btn-primary' rel="noreferrer">
+            <BsFillEyeFill />&nbsp;
+            Visualisar repositório
+          </a>
         </div>
 
       </div>

@@ -21,7 +21,7 @@ const getQueryByFilter = filter => {
       query = query + `${filter.name} in:name `
     }
 
-    if (filter.archived !== undefined && filter.archived !== 'undefined') {
+    if (filter.archived !== undefined && filter.archived !== 'all') {
       query = query + `archived:${filter.archived === '1' ? 'true ' : 'false '}`
     }
 

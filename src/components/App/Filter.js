@@ -23,8 +23,8 @@ const Filter = ({ filter, handleChange, clearFilter, handleSubmit }) => {
 
                 <div className='col-md-3'>
                   <label className='sr-only'>Arquivado?</label>
-                  <select className='form-control' id='select-archived' name='archived' defaultValue={'undefined'} onChange={handleChange}>
-                    <option value={'undefined'} selected>Todos</option>
+                  <select className='form-control' id='select-archived' name='archived' defaultValue={'all'} onChange={handleChange}>
+                    <option value='all'>Todos</option>
                     <option value='1'>Sim</option>
                     <option value='0'>Não</option>
                   </select>
