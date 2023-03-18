@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  app:
+    build:
+      context: .docker/app/
+      dockerfile: Dockerfile
+    working_dir: /var/www/app
+    volumes:
+      - '.:/var/www/app'
+      - './node_modules:/var/www/app/node_modules'
+    networks:
+      - frontend  
+    ports:
+      - "3003:3000"
+
+networks:
+  frontend: 
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.16.10.0/24

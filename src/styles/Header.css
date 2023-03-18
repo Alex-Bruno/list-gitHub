@@ -1,0 +1,13 @@
+#header {
+  width: 100%!important;
+  background-color: #5A2D82 !important;
+  height: 10%;
+}
+
+#header .container {
+  height: 100%!important;
+}
+
+#header div.logo {
+  height: 100%!important;
+}
