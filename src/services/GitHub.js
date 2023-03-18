@@ -22,35 +22,35 @@ const getQueryByFilter = filter => {
     }
 
     if (filter.archived !== undefined && filter.archived !== 'undefined') {
-      query = query + `archived:${filter.archived === '1' ? 'true' : 'false'}`
+      query = query + `archived:${filter.archived === '1' ? 'true ' : 'false '}`
     }
 
     if (filter.min_star && filter.max_star) {
-      query = query + `stars:${filter.min_star}..${filter.max_star}`
+      query = query + `stars:${filter.min_star}..${filter.max_star} `
     } else {
       if (filter.min_star) {
-        query = query + `stars:>=${filter.min_star}`
+        query = query + `stars:>=${filter.min_star} `
       }
 
       if (filter.max_star) {
-        query = query + `stars:<=${filter.max_star}`
+        query = query + `stars:<=${filter.max_star} `
       }
     }
 
     if (filter.start_date && filter.end_date) {
-      query = query + `created:${filter.start_date}..${filter.end_date}`
+      query = query + `created:${filter.start_date}..${filter.end_date} `
     } else {
       if (filter.start_date) {
-        query = query + `created:>=${filter.start_date}`
+        query = query + `created:>=${filter.start_date} `
       }
 
       if (filter.end_date) {
-        query = query + `created:<=${filter.end_date}`
+        query = query + `created:<=${filter.end_date} `
       }
     }
   }
 
-  return query;
+  return query.trim();
 }
 
 const getLastCommitter = async (response) => {
