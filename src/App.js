@@ -28,7 +28,7 @@ function App() {
     setRepositories([]);
 
     const comparableLastCommiter = (a, b) => {
-      if(filter.order === 'asc')
+      if (filter.order === 'asc')
         return a.last_committer > b.last_committer ? 1 : -1;
       return a.last_committer < b.last_committer ? 1 : -1;
     }
@@ -36,8 +36,8 @@ function App() {
     getRepositories(filter)
       .then(response => {
         if (response.length) {
-          
-          if(filter.sort === 'last-commit')
+
+          if (filter.sort === 'last-commit')
             response.sort((a, b) => comparableLastCommiter(a, b))
 
           setRepositories(response)
@@ -45,7 +45,18 @@ function App() {
         }
       })
       .catch(error => {
-        console.log(error)
+        let message = 'Houve um erro ao realizar a busca, tente novamente.';
+
+        const status = error.response.status;
+        if (status === 401) {
+          message = 'Houve um erro com o seu token, atualize-o e tente novamente.';
+        } else if (status === 403) {
+          message = 'Número de requests excedido, tente novamente mais tarde.';
+        } else if (status === 402) {
+          message = 'Houve um erro com a sua consulta, verifique o filtro e tente novamente.';
+        }
+
+        setMessage(message)
         setLoading(false);
       });
   }
@@ -78,6 +89,20 @@ function App() {
     </div>
   );
 
+  const renderErrorMessage = () => (
+    (message) && (
+      <div className='container mt-3'>
+        <div className='row'>
+          <div className='col-12'>
+            <div className='alert alert-danger' role='alert'>
+              {message}
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  );
+
   return (
     <div className='App'>
       <Header />
@@ -91,13 +116,7 @@ function App() {
         handleSubmit={handleSubmit}
       />
 
-      {
-        (message) && (
-          <div class="alert alert-danger" role="alert">
-            {message}
-          </div>
-        )
-      }
+      {renderErrorMessage()}
 
       <BlockUI blocked={loading}>
         <List

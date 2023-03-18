@@ -7,4 +7,4 @@ WORKDIR /var/www/app
 COPY . .
 
 # Inicializa a aplicação
-CMD ["npm", "run", "start"]
+CMD ["yarn", "run", "start"]

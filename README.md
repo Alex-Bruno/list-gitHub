@@ -4,7 +4,7 @@ Framework - React
 ## Levantar o ambiente ##
 ```
 #!bash
-docker-compose up -d --b
+sh run-dev.sh
 ```
 
 ## Instalação das dependências ##
