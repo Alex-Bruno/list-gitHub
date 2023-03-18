@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { BlockUI } from 'primereact/blockui';
 import Badge from 'react-bootstrap/Badge';
-import { useSearchParams } from 'react-router-dom';
 
 import Header from './components/App/Header';
 import List from './components/App/List';
@@ -12,13 +11,11 @@ import './styles/App.css';
 
 function App() {
   const [loading, setLoading] = useState([]);
-  const [, setSearchParams] = useSearchParams();
   const [filter, setFilter] = useState([]);
   const [repositories, setRepositories] = useState([]);
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    setSearchParams([])
     searchRepositories();
   }, [])
 
