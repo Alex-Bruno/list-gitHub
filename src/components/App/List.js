@@ -15,7 +15,7 @@ const List = ({ repositories }) => (
             />
           ))
         ) : (
-          <div className='col-12'>
+          <div className='col-12 mt-3'>
             <div className='alert alert-warning'>
               <MdSearchOff />&nbsp;
               Nenhum repositório foi encontrado.
