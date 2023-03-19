@@ -41,7 +41,7 @@ const Repository = ({ repository }) => {
 
           <small className='small text-info'>{repository.language}</small>
 
-          <a href={repository.html_url} target='_blank' className='btn btn-block btn-primary' rel="noreferrer">
+          <a href={repository.html_url} target='_blank' className='btn btn-block btn-primary text-bold' rel="noreferrer">
             <BsFillEyeFill />&nbsp;
             Visualisar repositório
           </a>
