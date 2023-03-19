@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/list-repositories-gitHub/static/css/main.9ef62e61.css",
-    "main.js": "/list-repositories-gitHub/static/js/main.370d1aec.js",
+    "main.js": "/list-repositories-gitHub/static/js/main.16b4082d.js",
     "static/js/787.20a932c6.chunk.js": "/list-repositories-gitHub/static/js/787.20a932c6.chunk.js",
     "index.html": "/list-repositories-gitHub/index.html",
     "main.9ef62e61.css.map": "/list-repositories-gitHub/static/css/main.9ef62e61.css.map",
-    "main.370d1aec.js.map": "/list-repositories-gitHub/static/js/main.370d1aec.js.map",
+    "main.16b4082d.js.map": "/list-repositories-gitHub/static/js/main.16b4082d.js.map",
     "787.20a932c6.chunk.js.map": "/list-repositories-gitHub/static/js/787.20a932c6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9ef62e61.css",
-    "static/js/main.370d1aec.js"
+    "static/js/main.16b4082d.js"
   ]
 }
