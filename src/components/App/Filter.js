@@ -56,7 +56,7 @@ const Filter = ({ filter, handleChange, clearFilter, handleSubmit }) => {
 
                 <div className='col-md-3'>
                   <label className='sr-only'>
-                    <BsCalendarFill title='ata de criação' />&nbsp;
+                    <BsCalendarFill title='Data de criação' />&nbsp;
                     Até
                   </label>
                   <input type='date' name='end_date' className='form-control' max={today.toISOString().split('T')[0]} onChange={handleChange} />
