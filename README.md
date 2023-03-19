@@ -18,3 +18,8 @@ Rota de retorno dos resultados:
 ```
 http://127.0.0.1:3003
 ```
+
+## Public URL
+```
+https://alex-bruno.github.io/list-repositories-gitHub/
+```
